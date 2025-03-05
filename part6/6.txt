@@ -1,0 +1,45 @@
+6.1 Modèle embarqué vs référence
+6.1.1 et 6.2.2 en capture d'écran
+6.1.3 - Comparez cette approche avec celle où les emprunts sont directement intégrés dans le document utilisateur :
+
+La première approche avec le tableau dans l'utisateur est plus simple, tout est au même endroit et on accède rapidement aux livres empruntés.
+La seconde approche avec la table emprunts est légèrement plus "complexe" mais plus organisée et beaucoup plus adaptée aux grands nombres de données car quand un utilsiateur aura plusieurs dizaines voire centaines d'emprunts ce sera beaucoup plus lisible dans une table dédiée plutôt que dans un tableau dans l'utilsiateur
+
+
+6.2 Réflexion sur la modélisation
+6.2.1- Quels sont les avantages et inconvénients de chaque approche :
+avantages:
+Tableau dans doc utilisateur :
+
+avantages:
+Toutes les infos des emprunts sont au même endroit dans un seul document utilisateur permettant un accès rapide et facile aux livres empruntés.
+
+Les requêtes pour obtenir les emprunts d'un utilisateur sont plus rapides, toutes les données sont contenues dans un seul document.
+
+inconvénients:
+Si de nombreux utilisateurs empruntent le même livre, le titre et les informations du livre sont dupliqués dans chaque document utilisateur ce qui n'est pas dry
+Pas adapté au grand nombre de volume
+
+
+Avec table pivot emprunts
+Plus structuré, organisé, tout est trié avec les ids c'est plus dry et propre
+Cela accepte aussi un peu grand nombre de données car c'est mieux organisé, les grosses jointures peuvent néanmoins être moins performantes 
+Plus de complexité au niveau des requêtes
+
+2.Quelle approche privilégieriez-vous pour une application réelle et pourquoi ?
+
+Je choisirai l'approche avec la table pivot car plus organisée, dry et flexible pour le nombre de données.
+La légère complexification des requêtes est je trouve largement justifiées pour les gains obtenus
+
+3.
+Comment modéliseriez vous les cas où un même livre peut exister en plusieurs exemplaires ?
+J'aurai ajouté un champ exemplaire (comme un numéro de série), qui permettrait d'identifier l'exemplaire :
+ utilisateur_id: ObjectId("..."),
+  livre_id: ObjectId("..."),
+  date_emprunt: new Date("2023-02-20"),
+  date_retour_prevue: new Date("2023-03-20"),
+  date_retour_effective: null,
+  statut: "en cours",
+  exemplaire: 8745
+
+
