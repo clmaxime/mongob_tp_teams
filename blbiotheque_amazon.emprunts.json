@@ -1,0 +1,42 @@
+[{
+  "_id": {
+    "$oid": "67c82c0b83232e862636d2f2"
+  },
+  "utilisateur_id": "67c82339bff31828511bd984",
+  "livre_id": "67c81188bff31828511bd97e",
+  "date_emprunt": {
+    "$date": "2023-02-20T00:00:00.000Z"
+  },
+  "date_retour_prevue": {
+    "$date": "2023-03-20T00:00:00.000Z"
+  },
+  "statut": "en cours"
+},
+{
+  "_id": {
+    "$oid": "67c82c6983232e862636d2f3"
+  },
+  "utilisateur_id": "67c82339bff31828511bd984",
+  "livre_id": "67c81188bff31828511bd97e",
+  "date_emprunt": {
+    "$date": "2023-02-20T00:00:00.000Z"
+  },
+  "date_retour_prevue": {
+    "$date": "2023-03-20T00:00:00.000Z"
+  },
+  "statut": "en retard"
+},
+{
+  "_id": {
+    "$oid": "67c82c6983232e862636d2f4"
+  },
+  "utilisateur_id": "67c82339bff31828511bd984",
+  "livre_id": "67c81188bff31828511bd97e",
+  "date_emprunt": {
+    "$date": "2023-02-20T00:00:00.000Z"
+  },
+  "date_retour_prevue": {
+    "$date": "2023-03-20T00:00:00.000Z"
+  },
+  "statut": "en cours"
+}]

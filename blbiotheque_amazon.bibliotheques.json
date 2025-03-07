@@ -1,0 +1,10 @@
+[{
+  "_id": {
+    "$oid": "67c9aa70b208298fc8132c2c"
+  },
+  "nom": "nom",
+  "adresse": {
+    "rue": "rue",
+    "pays": "france"
+  }
+}]
